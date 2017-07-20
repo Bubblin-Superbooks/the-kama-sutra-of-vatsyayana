@@ -5,6 +5,7 @@
     "JS": "js",
     "HEAD": "html"
   },
-  "name": "The Kama Sutra of Vatsyayana",
-  "type": "text"
+  "name": "The Kama Sutra",
+  "type": "text",
+  "book_id": 475
 }
