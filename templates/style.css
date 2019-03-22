@@ -2,7 +2,7 @@ html, body {
   background: #fff;
   margin: 0 0;
   overflow: hidden;
-  color: #010203;
+  color: #000;
   height:100vh;
   width:100vw;
   font-family: 'EB Garamond', serif;
@@ -20,6 +20,7 @@ html, body {
 h1, h2, h3, h4 {
   margin: 1vw 0;
   padding: 0;
+  color: #444;
   width: 100%;
   text-align: center;
   font-weight: 100;
@@ -31,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Eagle Lake', cursive;    
+    font-family: 'Berkshire Swash', cursive;
     margin: 2vw 0;
     padding: 0;
 }
@@ -89,12 +90,8 @@ a:active {
 }
 
 p {
-    text-indent: 5vw;  
+    text-indent: 5vw; 
     margin: 0 0 0 0;
-/*    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto; 
-*/
 }
 
 .no-indent {
@@ -105,23 +102,23 @@ p {
   text-align-last: justify;
 }
 
-.squeeze-para {
+.squeeze-para{
   letter-spacing: -0.5px;
 }
 
-hr.chapter {
+hr.section {
   border: 0;
   text-align: center;
   height: calc(4vw * 1.50);          /* Take a break of two lines only. */
   margin: calc((4vw * 1.50)/2) 0; 
 }
 
-hr.chapter::after {
+hr.section::after {
   content: "";
 }
 
-hr.chapter::before {
-  content: "❦"; 
+hr.section::before {
+  content: "❉"; 
   color: black;
 }
 
@@ -138,7 +135,7 @@ hr::after {
 }
 
 hr::before {
-  content: "❖";
+  content: "❧";
   color: black;
 }
 
@@ -164,6 +161,7 @@ blockquote {
   font-style: italic;
   position:relative;
   quotes: "\201C""\201D""\2018""\2019";
+  width: 90%;
   margin: calc( 4 * (150vh *(1115/1443))/100 * 7/5) auto;
 }
 
@@ -183,15 +181,52 @@ pre, code {
 }
 
 h3 {
-  font-family: 'Eagle Lake', cursive; 
+  font-family: 'Berkshire Swash', cursive;
   line-height: 1.2em;
-  font-size: 150%;
-  text-transform: capitalize; 
+  color: black;
+  font-size: 200%; 
 }
 
-.zcool {
-  font-family: 'Eagle Lake', cursive;
-  line-height: 1.1em;
+.berkshire {
+  font-family: 'Berkshire Swash', cursive;
+  line-height: 300%;
+  color: black;
+}
+
+.uppercase {
+  text-transform: uppercase;  
+}
+
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: step-counter calc(var(--start) - 1);
+}
+
+ol li {
+  counter-increment: step-counter;
+}
+
+ol li::before {
+  content: counter(step-counter) ". ";
+  margin-right: 1vw;
+  color: black; 
+  font-weight: bold;
+  padding: 0.3vw 0.8vw 0.3vw 0;
+}
+
+ol li.split-li {
+}
+
+ol li.split-li::before {
+  content: '';
+  margin-right: -0.8vw;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  font-weight: bold;
+  padding: 0.3vw 0.8vw 0.3vw 0;
 }
 
 .uppercase {
