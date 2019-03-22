@@ -123,6 +123,23 @@ hr.section::before {
 }
 
 
+hr.chapter {
+  border: 0;
+  text-align: center;
+  height: calc(4vw * 1.50);          /* Take a break of two lines only. */
+  margin: calc((4vw * 1.50)/2) 0; 
+}
+
+hr.chapter::after {
+  content: " ";
+}
+
+hr.chapter::before {
+  content: "❧";
+  color: black;
+}
+
+
 hr {
   border: 0;
   text-align: center;
@@ -131,13 +148,14 @@ hr {
 }
 
 hr::after {
-  content: " ";
+  content: "";
 }
 
 hr::before {
-  content: "❧";
-  color: black;
+  content: "✧";
+  color: black; 
 }
+
 
 
 .pad-vertically{
@@ -199,7 +217,7 @@ h3 {
 
 
 ol {
-  margin: 0;
+  margin: calc((4vw * 1.50)/2) 5vw; 
   padding: 0;
   list-style-type: none;
   counter-reset: step-counter calc(var(--start) - 1);
@@ -228,6 +246,19 @@ ol li.split-li::before {
   font-weight: bold;
   padding: 0.3vw 0.8vw 0.3vw 0;
 }
+
+
+ul {
+  margin: 0 0 0 5vw;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
 
 .uppercase {
   text-transform: uppercase;  
